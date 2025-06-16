@@ -30,7 +30,7 @@ nav a {
 }
 
 nav a:hover {
-  color: #ffa500;
+  color: #ccc;
 }
 
 main {
@@ -72,6 +72,8 @@ form textarea {
   border: 1px solid #ccc;
   border-radius: 4px;
   resize: vertical;
+  background-color: #fff;
+  color: #222;
 }
 
 form button {
@@ -103,6 +105,7 @@ form button:hover {
   box-shadow: 0 0 10px rgba(0,0,0,0.05);
   text-align: center;
   transition: transform 0.2s;
+  color: #222;
 }
 
 .episodi:hover {
@@ -121,7 +124,7 @@ form button:hover {
 
 .episodi p {
   font-size: 0.95rem;
-  color: #555;
+  color: #333;
 }
 
 .episodi a {
