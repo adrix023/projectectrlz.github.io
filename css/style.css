@@ -1,172 +1,184 @@
-        :root {
+  :root {
             --main-orange: #ff6600;
             --orange-light: #ff8533;
             --orange-dark: #e55a00;
-            --dark-gray: #1a1a1a;
-            --medium-gray: #2d2d2d;
-            --light-gray: #f8f9fa;
-            --white: #ffffff;
-            --shadow-light: rgba(255, 102, 0, 0.15);
-            --shadow-dark: rgba(0, 0, 0, 0.1);
-            --gradient-bg: linear-gradient(135deg, #ff6600 0%, #ff8533 100%);
-            --gradient-hover: linear-gradient(135deg, #e55a00 0%, #ff6600 100%);
+            --dark-gray: #333;
+            --medium-gray: #444;
+            --light-gray: #f5f6fa;
+            --white: #fff;
+            --shadow: rgba(255, 102, 0, 0.15);
+            --text-shadow: rgba(0, 0, 0, 0.1);
         }
 
-        /* General */
-        * {
-            box-sizing: border-box;
-        }
-
+        /* General - Mantiene tu estructura */
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #f5f6fa 0%, #dcdde1 100%);
             margin: 0;
             padding: 0;
             color: var(--dark-gray);
-            line-height: 1.6;
         }
 
         header {
             background: linear-gradient(135deg, var(--dark-gray) 0%, var(--medium-gray) 100%);
             color: var(--white);
-            padding: 32px 0 24px 0;
+            padding: 24px 0 16px 0;
             text-align: center;
-            letter-spacing: 2px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-            position: relative;
-            overflow: hidden;
-        }
-
-        header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-            animation: shine 3s infinite;
-        }
-
-        @keyframes shine {
-            0% { left: -100%; }
-            100% { left: 100%; }
+            letter-spacing: 1px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
 
         header h1 {
             margin: 0;
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             font-weight: 700;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-            position: relative;
-            z-index: 1;
+            background: linear-gradient(45deg, var(--main-orange), var(--orange-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
-        /* Menú mejorado */
+        /* Menú - Mejora sutil de tu versión original */
         nav ul {
             list-style: none;
             padding: 0;
-            margin: 20px 0 0 0;
+            margin: 0;
             display: flex;
             justify-content: center;
-            gap: 8px;
-            position: relative;
-            z-index: 1;
+            gap: 24px;
+        }
+
+        nav li {
+            margin: 0;
         }
 
         nav a {
             color: var(--white);
             text-decoration: none;
-            font-weight: 600;
-            padding: 12px 24px;
-            border-radius: 25px;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            font-size: 1rem;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            font-size: 1.05rem;
             letter-spacing: 0.5px;
-            position: relative;
-            overflow: hidden;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        nav a::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: var(--gradient-bg);
-            transition: left 0.3s ease;
-            z-index: -1;
-        }
-
-        nav a:hover::before,
-        nav a.active::before {
-            left: 0;
+            border: 2px solid transparent;
         }
 
         nav a:hover,
         nav a.active {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px var(--shadow-light);
+            background: linear-gradient(45deg, var(--main-orange), var(--orange-light));
             color: var(--white);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px var(--shadow);
+            border-color: var(--orange-light);
         }
 
-        /* Contenido principal mejorado */
+        /* Contenido principal - Mantiene tu diseño */
         main {
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 40px 24px;
+            max-width: 1100px;
+            margin: 32px auto;
+            padding: 32px 20px;
             background: var(--white);
-            border-radius: 20px;
-            box-shadow: 0 10px 40px var(--shadow-dark);
-            position: relative;
-            overflow: hidden;
-        }
-
-        main::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: var(--gradient-bg);
+            border-radius: 15px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+            border-top: 4px solid var(--main-orange);
         }
 
         section {
-            margin-bottom: 50px;
+            margin-bottom: 40px;
         }
 
-        h1, h2 {
-            background: var(--gradient-bg);
+        h1 {
+            background: linear-gradient(45deg, var(--main-orange), var(--orange-light));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
             font-weight: 700;
-            margin-bottom: 24px;
+            font-size: 2rem;
+            margin-bottom: 30px;
         }
 
-        /* Grid de episodios mejorado */
+        footer {
+            background: linear-gradient(135deg, var(--dark-gray) 0%, var(--medium-gray) 100%);
+            color: var(--white);
+            text-align: center;
+            padding: 18px 0;
+            font-size: 0.96rem;
+            box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Formulario - Mejoras sutiles */
+        form label,
+        form textarea,
+        form input {
+            display: block;
+            width: 100%;
+            margin-top: 10px;
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+
+        form input,
+        form textarea {
+            padding: 12px;
+            border: 2px solid #e1e5e9;
+            border-radius: 8px;
+            background: var(--white);
+            transition: all 0.3s ease;
+        }
+
+        form input:focus,
+        form textarea:focus {
+            outline: none;
+            border-color: var(--main-orange);
+            box-shadow: 0 0 0 3px var(--shadow);
+        }
+
+        form button {
+            background: linear-gradient(45deg, var(--main-orange), var(--orange-light));
+            color: var(--white);
+            padding: 12px 32px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 15px var(--shadow);
+        }
+
+        form button:hover {
+            background: linear-gradient(45deg, var(--orange-dark), var(--main-orange));
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px var(--shadow);
+        }
+
+        /* Episodis grid - Mantiene tu grid original */
         .episodis-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 32px;
-            margin-top: 32px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        @media (max-width: 1100px) {
+            .episodis-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 600px) {
+            .episodis-grid { grid-template-columns: 1fr; }
         }
 
         .episodi {
             background: var(--white);
-            border-radius: 16px;
+            border-radius: 15px;
             text-align: center;
-            padding: 24px 20px;
-            border: 1px solid rgba(255, 102, 0, 0.1);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            padding: 24px 16px;
+            border: 2px solid #f1f2f6;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
             position: relative;
             overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
         }
 
         .episodi::before {
@@ -176,15 +188,15 @@
             left: 0;
             right: 0;
             height: 4px;
-            background: var(--gradient-bg);
+            background: linear-gradient(45deg, var(--main-orange), var(--orange-light));
             transform: scaleX(0);
-            transition: transform 0.4s ease;
+            transition: transform 0.3s ease;
         }
 
         .episodi:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px var(--shadow-light);
             border-color: var(--main-orange);
+            box-shadow: 0 12px 35px var(--shadow);
+            transform: translateY(-5px);
         }
 
         .episodi:hover::before {
@@ -193,166 +205,66 @@
 
         .episodi img {
             max-width: 100%;
-            border-radius: 12px;
+            border-radius: 10px;
             margin-bottom: 16px;
-            transition: transform 0.4s ease;
+            transition: transform 0.3s ease;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
 
         .episodi:hover img {
-            transform: scale(1.05);
+            transform: scale(1.03);
         }
 
         .episodi h2 {
-            background: var(--gradient-bg);
+            background: linear-gradient(45deg, var(--main-orange), var(--orange-light));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            font-size: 1.2rem;
-            margin: 16px 0 12px 0;
-            font-weight: 700;
+            font-size: 1.1rem;
+            margin: 12px 0;
+            font-weight: 600;
             line-height: 1.4;
         }
 
         .episodi p {
             font-size: 0.95rem;
             color: #666;
-            line-height: 1.6;
+            line-height: 1.5;
             margin-bottom: 20px;
         }
 
-        /* Botón de episodio mejorado */
+        /* Botón de episodio - Mantiene funcionalidad */
         .episodi a {
             display: inline-block;
             margin-top: 12px;
-            background: var(--gradient-bg);
+            background: linear-gradient(45deg, var(--main-orange), var(--orange-light));
             color: var(--white);
-            padding: 12px 24px;
-            border-radius: 25px;
+            padding: 10px 20px;
+            border-radius: 20px;
             text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 4px 15px var(--shadow-light);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 0.85rem;
-        }
-
-        .episodi a::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: var(--gradient-hover);
-            transition: left 0.3s ease;
-            z-index: -1;
-        }
-
-        .episodi a:hover::before {
-            left: 0;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px var(--shadow);
         }
 
         .episodi a:hover {
+            background: linear-gradient(45deg, var(--orange-dark), var(--main-orange));
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px var(--shadow-light);
+            box-shadow: 0 6px 20px var(--shadow);
         }
-
-        /* Formulario mejorado */
-        form {
-            background: var(--light-gray);
-            padding: 32px;
-            border-radius: 16px;
-            border: 1px solid rgba(255, 102, 0, 0.1);
-        }
-
-        form label {
-            font-weight: 600;
-            color: var(--dark-gray);
-            margin-bottom: 8px;
-            display: block;
-        }
-
-        form input,
-        form textarea {
-            width: 100%;
-            padding: 16px;
-            border: 2px solid #e9ecef;
-            border-radius: 12px;
-            background: var(--white);
-            transition: all 0.3s ease;
-            font-size: 1rem;
-            margin-bottom: 20px;
-        }
-
-        form input:focus,
-        form textarea:focus {
-            outline: none;
-            border-color: var(--main-orange);
-            box-shadow: 0 0 0 3px var(--shadow-light);
-            transform: translateY(-2px);
-        }
-
-        form button {
-            background: var(--gradient-bg);
-            color: var(--white);
-            padding: 16px 32px;
-            border: none;
-            cursor: pointer;
-            font-weight: 700;
-            border-radius: 25px;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            font-size: 0.9rem;
-            box-shadow: 0 4px 15px var(--shadow-light);
-        }
-
-        form button:hover {
-            background: var(--gradient-hover);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px var(--shadow-light);
-        }
-
-        /* Footer mejorado */
-        footer {
-            background: linear-gradient(135deg, var(--dark-gray) 0%, var(--medium-gray) 100%);
-            color: var(--white);
-            text-align: center;
-            padding: 24px 0;
-            font-size: 0.95rem;
-            margin-top: 40px;
-            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Animaciones adicionales */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .episodi {
-            animation: fadeInUp 0.6s ease forwards;
-        }
-
-        .episodi:nth-child(2) { animation-delay: 0.1s; }
-        .episodi:nth-child(3) { animation-delay: 0.2s; }
-        .episodi:nth-child(4) { animation-delay: 0.3s; }
 
         /* Responsive mejorado */
         @media (max-width: 768px) {
-            header h1 { font-size: 2rem; }
-            nav ul { flex-direction: column; align-items: center; gap: 12px; }
-            nav a { width: 200px; text-align: center; }
-            main { margin: 20px; padding: 24px 16px; }
-            .episodis-grid { gap: 24px; }
+            header h1 { font-size: 1.8rem; }
+            nav ul { 
+                flex-direction: column; 
+                align-items: center; 
+                gap: 12px; 
+                margin-top: 15px;
+            }
+            main { 
+                margin: 20px; 
+                padding: 24px 16px; 
+            }
+            .episodis-grid { gap: 20px; }
         }
