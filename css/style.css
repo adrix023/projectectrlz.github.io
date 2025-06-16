@@ -135,24 +135,51 @@ form textarea:focus {
     box-shadow: 0 0 0 3px var(--shadow);
 }
 
-form button {
-    background: linear-gradient(45deg, var(--main-orange), var(--orange-light));
-    color: var(--white);
-    padding: 12px 32px;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-    border-radius: 25px;
-    transition: all 0.3s ease;
-    letter-spacing: 0.5px;
-    box-shadow: 0 4px 15px var(--shadow);
-}
+ .improved-button-v3 {
+            position: relative;
+            background: linear-gradient(135deg, var(--main-orange), var(--orange-light));
+            color: var(--white);
+            padding: 16px 38px;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            border-radius: 28px;
+            transition: all 0.4s ease;
+            letter-spacing: 0.6px;
+            font-size: 16px;
+            overflow: hidden;
+            box-shadow: 
+                0 8px 25px var(--shadow),
+                0 0 0 2px rgba(255, 107, 53, 0.3);
+        }
 
-form button:hover {
-    background: linear-gradient(45deg, var(--orange-dark), var(--main-orange));
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px var(--shadow);
-}
+        .improved-button-v3::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, var(--main-orange), var(--orange-light), var(--orange-dark), var(--main-orange));
+            border-radius: 30px;
+            z-index: -1;
+            background-size: 400% 400%;
+            animation: gradientShift 3s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .improved-button-v3:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 
+                0 15px 35px var(--shadow),
+                0 0 20px rgba(255, 107, 53, 0.4),
+                0 0 0 3px rgba(255, 107, 53, 0.2);
+        }
+
 
 /* Episodis grid - CAMBIADO A 3 COLUMNAS */
 .episodis-grid {
