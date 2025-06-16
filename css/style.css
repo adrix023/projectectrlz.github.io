@@ -1,75 +1,104 @@
 /* Estilo general */
 body {
-  font-family: 'Roboto', sans-serif; /* Tipografía moderna */
-  background-color: #f5f5f5; /* Color de fondo claro */
+  font-family: 'Poppins', sans-serif; /* Tipografía moderna y juvenil */
+  background-color: #f9f9f9; /* Fondo claro */
   margin: 0;
   padding: 0;
-  color: #333333; /* Color de texto oscuro */
+  color: #333333; /* Texto oscuro */
   line-height: 1.6;
 }
 
 /* Encabezado */
 header {
-  background-color: #ff6f61; /* Color principal de la imagen */
+  background: linear-gradient(135deg, #ff5722, #ff9800); /* Gradiente llamativo */
   color: #ffffff; /* Texto blanco */
-  padding: 20px;
+  padding: 40px 20px;
   text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra moderna */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra moderna */
+  position: relative;
 }
 
 header h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+header::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 5px;
+  background-color: #ffffff; /* Línea decorativa */
+  border-radius: 50px;
 }
 
 /* Navegación */
+nav {
+  background-color: #ff9800; /* Color vibrante */
+  padding: 10px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra moderna */
+}
+
 nav ul {
   list-style: none;
   padding: 0;
   display: flex;
   justify-content: center;
-  gap: 20px;
-  margin-top: 10px;
+  gap: 30px;
+  margin: 0;
 }
 
 nav a {
   color: #ffffff;
   text-decoration: none;
   font-weight: bold;
-  padding: 10px 15px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */
+  font-size: 1.1rem;
+  padding: 10px 20px;
+  border-radius: 50px;
+  background-color: #ff5722; /* Color llamativo */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Transición suave */
 }
 
 nav a:hover {
   background-color: #e64a19; /* Color más oscuro */
-  color: #ffe0b2; /* Color claro */
+  transform: scale(1.1); /* Efecto de zoom */
 }
 
 /* Contenido principal */
 main {
-  max-width: 1100px;
-  margin: 30px auto;
+  max-width: 1200px;
+  margin: 40px auto;
   padding: 20px;
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra moderna */
 }
 
 /* Secciones */
 section {
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 
 section h2 {
-  font-size: 2rem;
-  color: #ff6f61; /* Color principal */
+  font-size: 2.5rem;
+  color: #ff5722; /* Color vibrante */
   margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 section p {
-  font-size: 1.1rem;
-  color: #666666; /* Gris oscuro */
+  font-size: 1.2rem;
+  color: #555555; /* Gris oscuro */
+  text-align: center;
 }
 
 /* Episodios */
@@ -80,22 +109,22 @@ section p {
 }
 
 .episodio {
-  background-color: #ffe0b2; /* Color claro */
+  background-color: #ffffff; /* Fondo blanco */
   padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra moderna */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra moderna */
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .episodio:hover {
   transform: scale(1.05); /* Efecto de zoom */
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
 }
 
 .episodio h3 {
   font-size: 1.5rem;
-  color: #e64a19; /* Color destacado */
+  color: #ff5722; /* Color destacado */
   margin-bottom: 10px;
 }
 
@@ -106,11 +135,11 @@ section p {
 
 /* Botones */
 button {
-  background-color: #ff6f61; /* Color principal */
+  background-color: #ff5722; /* Color vibrante */
   color: #ffffff;
   border: none;
   padding: 10px 20px;
-  border-radius: 5px;
+  border-radius: 50px;
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease; /* Transición suave */
@@ -118,12 +147,12 @@ button {
 
 button:hover {
   background-color: #e64a19; /* Color más oscuro */
-  transform: scale(1.05); /* Efecto de zoom */
+  transform: scale(1.1); /* Efecto de zoom */
 }
 
 /* Enlaces */
 a {
-  color: #ff6f61; /* Color principal */
+  color: #ff5722; /* Color vibrante */
   text-decoration: none;
   transition: color 0.3s ease;
 }
