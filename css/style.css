@@ -1,19 +1,28 @@
-/* Estil general */
+/* Estilo general */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f7f7f7;
+  font-family: 'Roboto', sans-serif; /* Tipografía moderna */
+  background-color: #e8f0fe; /* Color de fondo claro */
   margin: 0;
   padding: 0;
-  color: #333;
+  color: #2c3e50; /* Color de texto oscuro */
+  line-height: 1.6;
 }
 
+/* Encabezado */
 header {
-  background-color: #222;
-  color: #fff;
+  background-color: #1e88e5; /* Azul vibrante */
+  color: #ffffff; /* Texto blanco */
   padding: 20px;
   text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra moderna */
 }
 
+header h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+/* Navegación */
 nav ul {
   list-style: none;
   padding: 0;
@@ -24,120 +33,69 @@ nav ul {
 }
 
 nav a {
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
   font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */
 }
 
 nav a:hover {
-  color: #ccc;
+  background-color: #1565c0; /* Azul más oscuro */
+  color: #e3f2fd; /* Azul claro */
 }
 
+/* Contenido principal */
 main {
   max-width: 1100px;
   margin: 30px auto;
   padding: 20px;
-  background-color: #fff;
+  background-color: #ffffff;
   border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra moderna */
 }
 
+/* Secciones */
 section {
   margin-bottom: 40px;
 }
 
-footer {
-  background-color: #222;
-  color: #fff;
-  text-align: center;
-  padding: 15px;
-  position: relative;
-  bottom: 0;
-  width: 100%;
+section h2 {
+  font-size: 2rem;
+  color: #1e88e5; /* Azul vibrante */
+  margin-bottom: 20px;
 }
 
-/* Formulari d'interacció */
-form label,
-form textarea,
-form input {
-  display: block;
-  width: 100%;
-  margin-top: 10px;
-  margin-bottom: 15px;
-  font-size: 1rem;
-}
-
-form input,
-form textarea {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  resize: vertical;
-  background-color: #fff;
-  color: #222;
-}
-
-form button {
-  background-color: #222;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  font-weight: bold;
-  border-radius: 4px;
-  transition: background-color 0.3s;
-}
-
-form button:hover {
-  background-color: #444;
-}
-
-/* Graella d'episodis */
-.episodis-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 30px;
-}
-
-.episodi {
-  background-color: #fff;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
-  text-align: center;
-  transition: transform 0.2s;
-  color: #222;
-}
-
-.episodi:hover {
-  transform: translateY(-5px);
-}
-
-.episodi img {
-  max-width: 100%;
-  border-radius: 6px;
-}
-
-.episodi h2 {
+section p {
   font-size: 1.1rem;
-  margin: 10px 0;
+  color: #34495e; /* Gris oscuro */
 }
 
-.episodi p {
-  font-size: 0.95rem;
-  color: #333;
+/* Botones */
+button {
+  background-color: #1e88e5; /* Azul vibrante */
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Transición suave */
 }
 
-.episodi a {
-  display: inline-block;
-  margin-top: 10px;
-  background-color: #222;
-  color: #fff;
-  padding: 8px 12px;
-  border-radius: 4px;
+button:hover {
+  background-color: #1565c0; /* Azul más oscuro */
+  transform: scale(1.05); /* Efecto de zoom */
+}
+
+/* Enlaces */
+a {
+  color: #1e88e5; /* Azul vibrante */
   text-decoration: none;
-  font-weight: bold;
+  transition: color 0.3s ease;
 }
 
-.episodi a:hover {
-  background-color: #444;
+a:hover {
+  color: #1565c0; /* Azul más oscuro */
 }
