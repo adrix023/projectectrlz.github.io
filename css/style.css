@@ -1,16 +1,16 @@
 /* Estilo general */
 body {
   font-family: 'Roboto', sans-serif; /* Tipografía moderna */
-  background-color: #e8f0fe; /* Color de fondo claro */
+  background-color: #f5f5f5; /* Color de fondo claro */
   margin: 0;
   padding: 0;
-  color: #2c3e50; /* Color de texto oscuro */
+  color: #333333; /* Color de texto oscuro */
   line-height: 1.6;
 }
 
 /* Encabezado */
 header {
-  background-color: #1e88e5; /* Azul vibrante */
+  background-color: #ff6f61; /* Color principal de la imagen */
   color: #ffffff; /* Texto blanco */
   padding: 20px;
   text-align: center;
@@ -42,8 +42,8 @@ nav a {
 }
 
 nav a:hover {
-  background-color: #1565c0; /* Azul más oscuro */
-  color: #e3f2fd; /* Azul claro */
+  background-color: #e64a19; /* Color más oscuro */
+  color: #ffe0b2; /* Color claro */
 }
 
 /* Contenido principal */
@@ -63,18 +63,50 @@ section {
 
 section h2 {
   font-size: 2rem;
-  color: #1e88e5; /* Azul vibrante */
+  color: #ff6f61; /* Color principal */
   margin-bottom: 20px;
 }
 
 section p {
   font-size: 1.1rem;
-  color: #34495e; /* Gris oscuro */
+  color: #666666; /* Gris oscuro */
+}
+
+/* Episodios */
+.episodios {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Filas de 4 episodios */
+  gap: 20px;
+}
+
+.episodio {
+  background-color: #ffe0b2; /* Color claro */
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra moderna */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.episodio:hover {
+  transform: scale(1.05); /* Efecto de zoom */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
+}
+
+.episodio h3 {
+  font-size: 1.5rem;
+  color: #e64a19; /* Color destacado */
+  margin-bottom: 10px;
+}
+
+.episodio p {
+  font-size: 1rem;
+  color: #333333; /* Texto oscuro */
 }
 
 /* Botones */
 button {
-  background-color: #1e88e5; /* Azul vibrante */
+  background-color: #ff6f61; /* Color principal */
   color: #ffffff;
   border: none;
   padding: 10px 20px;
@@ -85,17 +117,17 @@ button {
 }
 
 button:hover {
-  background-color: #1565c0; /* Azul más oscuro */
+  background-color: #e64a19; /* Color más oscuro */
   transform: scale(1.05); /* Efecto de zoom */
 }
 
 /* Enlaces */
 a {
-  color: #1e88e5; /* Azul vibrante */
+  color: #ff6f61; /* Color principal */
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 a:hover {
-  color: #1565c0; /* Azul más oscuro */
+  color: #e64a19; /* Color más oscuro */
 }
