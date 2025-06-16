@@ -1,54 +1,54 @@
-/* Estilo general */
+/* Estil general */
 body {
-  font-family: 'Poppins', sans-serif; /* Tipografía moderna y juvenil */
-  background-color: #f0f4f8; /* Fondo claro y limpio */
+  font-family: 'Poppins', sans-serif;
+  background-color: #f3ede7; /* Beix molt clar, inspirat en el fons de la imatge */
   margin: 0;
   padding: 0;
-  color: #333333; /* Texto oscuro */
+  color: #2e2e2e; /* Text gris fosc */
   line-height: 1.6;
 }
 
 /* Encabezado */
 header {
-  background: linear-gradient(135deg, #ff6f61, #ff9800); /* Gradiente llamativo */
-  color: #ffffff; /* Texto blanco */
+  background-color: #cc4b2c; /* Vermell ataronjat */
+  color: #fff3e5;
   padding: 60px 20px;
   text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra moderna */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   position: relative;
 }
 
 header h1 {
-  font-size: 3.5rem;
+  font-size: 3rem;
   margin: 0;
   text-transform: uppercase;
-  letter-spacing: 3px;
-  font-weight: bold;
+  letter-spacing: 2px;
+  font-weight: 700;
 }
 
 header p {
-  font-size: 1.5rem;
-  margin-top: 15px;
+  font-size: 1.4rem;
+  margin-top: 12px;
   font-style: italic;
 }
 
 header::after {
   content: '';
   position: absolute;
-  bottom: -30px;
+  bottom: -20px;
   left: 50%;
   transform: translateX(-50%);
-  width: 100px;
-  height: 6px;
-  background-color: #ffffff; /* Línea decorativa */
+  width: 80px;
+  height: 5px;
+  background-color: #fff3e5;
   border-radius: 50px;
 }
 
-/* Navegación */
+/* Navegació */
 nav {
-  background-color: #ff9800; /* Color vibrante */
+  background-color: #1f1f1f; /* Negre suau */
   padding: 15px 0;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra moderna */
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
 }
 
 nav ul {
@@ -61,103 +61,119 @@ nav ul {
 }
 
 nav a {
-  color: #ffffff;
+  color: #f3ede7;
   text-decoration: none;
   font-weight: bold;
-  font-size: 1.2rem;
-  padding: 10px 25px;
-  border-radius: 30px;
-  background-color: #ff6f61; /* Color llamativo */
-  transition: background-color 0.3s ease, transform 0.2s ease; /* Transición suave */
+  font-size: 1.1rem;
+  padding: 10px 20px;
+  border-radius: 25px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 nav a:hover {
-  background-color: #e64a19; /* Color más oscuro */
-  transform: scale(1.1); /* Efecto de zoom */
+  background-color: #cc4b2c;
+  transform: scale(1.05);
 }
 
-/* Contenido principal */
+/* Contingut principal */
 main {
   max-width: 1200px;
   margin: 50px auto;
   padding: 20px;
 }
 
-/* Secciones */
+/* Seccions */
 section {
   margin-bottom: 60px;
 }
 
 section h2 {
-  font-size: 2.8rem;
-  color: #ff6f61; /* Color vibrante */
+  font-size: 2.6rem;
+  color: #cc4b2c;
   margin-bottom: 25px;
   text-align: center;
   text-transform: uppercase;
 }
 
 section p {
-  font-size: 1.3rem;
-  color: #555555; /* Gris oscuro */
+  font-size: 1.2rem;
+  color: #444;
   text-align: center;
 }
 
-/* Episodios */
+/* Episodis */
 .episodios {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Filas de 4 episodios */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
 }
 
 .episodio {
-  background-color: #ffffff; /* Fondo blanco */
+  background-color: #fff;
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra moderna */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .episodio:hover {
-  transform: scale(1.05); /* Efecto de zoom */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
+  transform: scale(1.03);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .episodio h3 {
-  font-size: 1.6rem;
-  color: #ff6f61; /* Color destacado */
-  margin-bottom: 15px;
+  font-size: 1.5rem;
+  color: #cc4b2c;
+  margin-bottom: 10px;
 }
 
 .episodio p {
-  font-size: 1.1rem;
-  color: #333333; /* Texto oscuro */
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 10px;
 }
 
-/* Botones */
+.episodio a {
+  display: inline-block;
+  margin-top: 10px;
+  background-color: #1f1f1f;
+  color: #f3ede7;
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.episodio a:hover {
+  background-color: #cc4b2c;
+}
+
+/* Botons */
 button {
-  background-color: #ff6f61; /* Color vibrante */
-  color: #ffffff;
+  background-color: #cc4b2c;
+  color: #fff3e5;
   border: none;
   padding: 12px 25px;
   border-radius: 30px;
   font-size: 1.1rem;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease; /* Transición suave */
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
-  background-color: #e64a19; /* Color más oscuro */
-  transform: scale(1.1); /* Efecto de zoom */
+  background-color: #a63921;
+  transform: scale(1.1);
 }
 
-/* Enlaces */
+/* Enllaços generals */
 a {
-  color: #ff6f61; /* Color vibrante */
+  color: #cc4b2c;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 a:hover {
-  color: #e64a19; /* Color más oscuro */
+  color: #a63921;
 }
