@@ -16,6 +16,7 @@
       justify-content: center;
       height: 100vh;
       text-align: center;
+      padding: 20px;
     }
 
     img {
@@ -54,11 +55,54 @@
       font-size: 1.2rem;
       margin-top: 20px;
     }
+
+    .links {
+      margin-top: 30px;
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .link-btn {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background-color: #000;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .link-btn:hover {
+      background-color: #333;
+      transform: scale(1.05);
+    }
+
+    .link-btn img {
+      width: 24px;
+      height: 24px;
+      border-radius: 5px;
+    }
   </style>
 </head>
 <body>
   <img src="logo.png" alt="Logo Projecte Ctrl Z">
   <h1><span class="typing">Pàgina en construcció...</span></h1>
   <p>Tornarem aviat amb el web del nostre podcast 🎙️</p>
+
+  <div class="links">
+    <a class="link-btn" href="https://open.spotify.com/show/6cMnoEahzhnaaUuMI4OPdf?si=933e6e8023014b19" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Spotify_icon.svg" alt="Spotify">
+      Spotify
+    </a>
+    <a class="link-btn" href="http://youtube.com/@CtrlZ.catal%C3%A0" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube">
+      YouTube
+    </a>
+  </div>
 </body>
 </html>
