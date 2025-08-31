@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre nosaltres | Projecte Ctrl Z</title>
+  <meta name="description" content="Som dos estudiants d’Educació i d’Informàtica, el Bernat i l’Adrià, i us presentem el podcast on exposem la realitat juvenil sense filtres.">
+  <meta property="og:image" content="/assets/images/FotoLogo.png">
+  <link rel="icon" type="image/png" href="/assets/images/FotoLogo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo-area">
+        <img src="/assets/images/FotoLogo.png" alt="Logo Projecte Ctrl Z" class="logo-img">
+        <span class="logo-text">Projecte Ctrl Z</span>
+      </a>
+      <nav>
+        <button class="nav-toggle" aria-label="Menú" aria-expanded="false">☰</button>
+        <ul class="nav-links">
+          <li><a href="index.html">Inici</a></li>
+          <li><a href="sobre-nosaltres.html">Sobre nosaltres</a></li>
+          <li><a href="programes.html">Programes</a></li>
+          <li><a href="en-directe.html">En directe</a></li>
+          <li><a href="contacte.html">Contacte</a></li>
+          <li><a href="patrocina.html">Patrocina</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="section" style="margin-top:2.5rem;">
+  <h1>Sobre nosaltres</h1>
+      <p class="subtitle">Som dos estudiants d'Educació i d'Informàtica, el Bernat i l’Adrià, i us presentem el podcast on exposem la realitat juvenil sense filtres.</p>
+      <div style="display:flex;justify-content:center;gap:2.5rem;flex-wrap:wrap;max-width:700px;margin:2rem auto 0 auto;">
+        <div style="text-align:center;">
+          <img src="/assets/images/Bernat.png" alt="Bernat" style="width:180px;max-width:90vw;height:180px;object-fit:cover;border-radius:50%;box-shadow:0 2px 12px #d85d2a22;background:#fff7f2;margin-bottom:0.7rem;">
+          <div style="font-weight:600;font-size:1.1rem;">Bernat</div>
+        </div>
+        <div style="text-align:center;">
+          <img src="/assets/images/Adrià.png" alt="Adrià" style="width:180px;max-width:90vw;height:180px;object-fit:cover;border-radius:50%;box-shadow:0 2px 12px #d85d2a22;background:#fff7f2;margin-bottom:0.7rem;">
+          <div style="font-weight:600;font-size:1.1rem;">Adrià</div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container footer-flex">
+      <div class="footer-logo">
+        <img src="/assets/images/FotoLogo.png" alt="Logo" class="footer-img">
+        <span>Projecte Ctrl Z</span>
+      </div>
+    </div>
+    <div class="footer-copy">© 2025 Projecte Ctrl Z. Tots els drets reservats.</div>
+  </footer>
+  <script>
+    // Menú hamburguesa
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    navToggle.addEventListener('click', function() {
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', !expanded);
+      navLinks.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

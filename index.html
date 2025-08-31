@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projecte Ctrl Z</title>
+  <meta name="description" content="Podcast juvenil en català. Novetats, curiositats i debats sense filtres.">
+  <meta property="og:title" content="Projecte Ctrl Z">
+  <meta property="og:description" content="Podcast juvenil en català. Novetats, curiositats i debats sense filtres.">
+  <meta property="og:image" content="/assets/images/FotoLogo.png">
+  <link rel="icon" type="image/png" href="/assets/images/FotoLogo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo-area">
+        <img src="/assets/images/FotoLogo.png" alt="Logo Projecte Ctrl Z" class="logo-img animated-logo">
+        <span class="logo-text">Projecte Ctrl Z</span>
+      </a>
+      <nav>
+        <button class="nav-toggle" aria-label="Menú" aria-expanded="false">☰</button>
+        <ul class="nav-links">
+          <li><a href="index.html">Inici</a></li>
+          <li><a href="sobre-nosaltres.html">Sobre nosaltres</a></li>
+          <li><a href="programes.html">Programes</a></li>
+          <li><a href="en-directe.html">En directe</a></li>
+      <!--    <li><a href="contacte.html">Contacte</a></li> -->
+        <!--  <li><a href="patrocina.html">Patrocina</a></li> -->
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <img src="/assets/images/FotoLogo.png" alt="Logo Projecte Ctrl Z" class="hero-img animated-logo">
+      <h1>Benvinguts a Projecte Ctrl Z</h1>
+      <p class="subtitle">El podcast juvenil on exposem la realitat sense filtres. Novetats, curiositats, debats i enquestes cada setmana!</p>
+      <div class="hero-btns">
+        <a href="https://www.youtube.com/@ProjecteCtrlZ" target="_blank" class="btn">
+          <img src="assets/images/youtube.svg" alt="YouTube" style="height:1.3em;width:1.3em;vertical-align:middle;margin-right:0.5em;display:inline-block;">YouTube
+        </a>
+        <a href="https://open.spotify.com/show/6cMnoEahzhnaaUuMI4OPdf?si=ba46bce3bd5b46df" target="_blank" class="btn">
+          <img src="assets/images/spotify.svg" alt="Spotify" style="height:1.3em;width:1.3em;vertical-align:middle;margin-right:0.5em;display:inline-block;">Spotify
+        </a>
+        <a href="https://www.instagram.com/projectectrlz/" target="_blank" class="btn">
+          <img src="assets/images/instagram.svg" alt="Instagram" style="height:1.3em;width:1.3em;vertical-align:middle;margin-right:0.5em;display:inline-block;">Instagram
+        </a>
+        <a href="https://music.amazon.es/podcasts/d1d6b3b0-bcc5-4666-afcb-af064fffb488/projecte-ctrl-z" target="_blank" class="btn">
+          <img src="assets/images/amazonmusic.svg" alt="Amazon Music" style="height:1.3em;width:1.3em;vertical-align:middle;margin-right:0.5em;display:inline-block;">Amazon Music
+        </a>
+      </div>
+    </section>
+    <section class="section novetats">
+      <h2>Novetats</h2>
+      <ul>
+        <li>Nou episodi cada dimecres a les 19h a Spotify i YouTube!</li>
+        <li>Participa a les nostres enquestes a Instagram.</li>
+        <li>En directe a la ràdio cada diumenge de 19-20h.</li>
+      </ul>
+    </section>
+    <section class="section curiositats">
+      <h2>Curiositats</h2>
+      <div class="curiositats-grid">
+        <div class="curio-box">
+          <h3>Sabies que...</h3>
+          <p>El nom "Ctrl Z" fa referència a la tecla per desfer, perquè volem repensar la realitat juvenil!</p>
+        </div>
+        <div class="curio-box">
+          <h3>Dades ràpides</h3>
+          <ul>
+            <li>Podcast 100% en català</li>
+            <li>Estudiants d’Educació i Informàtica</li>
+            <li>Debats sense filtres</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="section enquestes">
+      <h2>Enquestes</h2>
+      <p>Participa a les nostres enquestes setmanals a <a href="https://www.instagram.com/projectectrlz/" target="_blank">Instagram</a>!</p>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container footer-flex">
+      <div class="footer-logo">
+        <img src="/assets/images/FotoLogo.png" alt="Logo" class="footer-img">
+        <span>Projecte Ctrl Z</span>
+      </div>
+    </div>
+    <div class="footer-copy">© 2025 Projecte Ctrl Z. Tots els drets reservats.</div>
+  </footer>
+  <script>
+    // Menú hamburguesa
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    navToggle.addEventListener('click', function() {
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', !expanded);
+      navLinks.classList.toggle('open');
+    });
+    // Animación de entrada para los logos
+    window.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('.animated-logo').forEach(function(logo) {
+        logo.classList.add('logo-animate-in');
+      });
+    });
+  </script>
+</body>
+</html>

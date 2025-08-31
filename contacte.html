@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacte | Projecte Ctrl Z</title>
+  <meta name="description" content="Contacta amb nosaltres per suggeriments, col·laboracions o qualsevol consulta.">
+  <meta property="og:image" content="/assets/images/FotoLogo.png">
+  <link rel="icon" type="image/png" href="/assets/images/FotoLogo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo-area">
+        <img src="/assets/images/FotoLogo.png" alt="Logo Projecte Ctrl Z" class="logo-img">
+        <span class="logo-text">Projecte Ctrl Z</span>
+      </a>
+      <nav>
+        <button class="nav-toggle" aria-label="Menú" aria-expanded="false">☰</button>
+        <ul class="nav-links">
+          <li><a href="index.html">Inici</a></li>
+          <li><a href="sobre-nosaltres.html">Sobre nosaltres</a></li>
+          <li><a href="programes.html">Programes</a></li>
+          <li><a href="en-directe.html">En directe</a></li>
+          <li><a href="contacte.html">Contacte</a></li>
+          <li><a href="patrocina.html">Patrocina</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="section" style="margin-top:2.5rem;max-width:700px;display:flex;gap:2.5rem;align-items:stretch;background:#fff7f2;box-shadow:0 2px 12px rgba(216,93,42,0.06);">
+  <div style="flex:1;display:flex;flex-direction:column;justify-content:center;">
+        <h1 style="display:flex;align-items:center;gap:0.7em;font-size:2.2rem;">
+          <img src="assets/images/email.svg" alt="Contacte" style="height:2.1rem;width:2.1rem;vertical-align:middle;">Contacte
+        </h1>
+        <p style="margin:1.2rem 0 2.2rem 0;font-size:1.1rem;color:#d85d2a;max-width:420px;">
+          Tens dubtes o suggeriments? Omple el formulari i et respondrem el més aviat possible!
+        </p>
+        <form id="contact-form" style="display:flex;flex-direction:column;gap:1.2rem;">
+          <div style="text-align:left;position:relative;">
+            <label for="nom" style="font-weight:500;">Nom</label><br>
+            <input type="text" id="nom" name="nom" required style="width:100%;padding:0.7rem 1rem 0.7rem 2.5rem;border-radius:8px;border:1px solid #ccc;font-size:1rem;margin-top:0.3rem;">
+            <img src="assets/images/email.svg" alt="Nom" style="position:absolute;left:0.7rem;top:2.3rem;height:1.2em;width:1.2em;opacity:0.5;">
+          </div>
+          <div style="text-align:left;position:relative;">
+            <label for="email" style="font-weight:500;">Correu electrònic</label><br>
+            <input type="email" id="email" name="email" required style="width:100%;padding:0.7rem 1rem 0.7rem 2.5rem;border-radius:8px;border:1px solid #ccc;font-size:1rem;margin-top:0.3rem;">
+            <img src="assets/images/email.svg" alt="Email" style="position:absolute;left:0.7rem;top:2.3rem;height:1.2em;width:1.2em;opacity:0.5;">
+          </div>
+          <div style="text-align:left;position:relative;">
+            <label for="missatge" style="font-weight:500;">Missatge</label><br>
+            <textarea id="missatge" name="missatge" rows="4" required style="width:100%;padding:0.7rem 1rem 0.7rem 2.5rem;border-radius:8px;border:1px solid #ccc;font-size:1rem;margin-top:0.3rem;"></textarea>
+            <img src="assets/images/paperplane.svg" alt="Missatge" style="position:absolute;left:0.7rem;top:2.3rem;height:1.2em;width:1.2em;opacity:0.5;">
+          </div>
+          <button type="submit" class="btn" style="margin-top:0.5rem;display:flex;align-items:center;gap:0.5em;">
+            <img src="assets/images/paperplane.svg" alt="Enviar" style="height:1.2em;width:1.2em;vertical-align:middle;">Envia
+          </button>
+          <div id="form-message" style="margin-top:1rem;color:#1a7f37;font-weight:600;display:none;transition:all 0.4s;">Gràcies per contactar! Hem rebut el teu missatge.</div>
+        </form>
+      </div>
+      <div style="flex:1;display:flex;align-items:center;justify-content:center;">
+        <img src="assets/images/FotoLogo.png" alt="Equip Projecte Ctrl Z" style="max-width:220px;width:100%;border-radius:18px;box-shadow:0 4px 24px rgba(216,93,42,0.10);background:#fff;">
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container footer-flex">
+      <div class="footer-logo">
+        <img src="/assets/images/FotoLogo.png" alt="Logo" class="footer-img">
+        <span>Projecte Ctrl Z</span>
+      </div>
+    </div>
+    <div class="footer-copy">© 2025 Projecte Ctrl Z. Tots els drets reservats.</div>
+  </footer>
+  <script>
+    // Menú hamburguesa
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    navToggle.addEventListener('click', function() {
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', !expanded);
+      navLinks.classList.toggle('open');
+    });
+    // Formulario con animación de respuesta
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const msg = document.getElementById('form-message');
+      msg.style.display = 'block';
+      msg.style.opacity = 0;
+      setTimeout(()=>{msg.style.opacity=1;}, 50);
+      this.reset();
+      setTimeout(()=>{msg.style.opacity=0;}, 3000);
+      setTimeout(()=>{msg.style.display='none';}, 3400);
+    });
+  </script>
+</body>
+</html>
