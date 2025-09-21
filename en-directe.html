@@ -4,39 +4,41 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>En directe | Projecte Ctrl Z</title>
-  <meta name="description" content="En directe a la ràdio tots els diumenges de 19-20h i en altres plataformes dimecres a les 19h.">
+  <meta name="description" content="En directe a la ràdio cada diumenge de 19-20h i en altres plataformes dimecres a les 19h.">
+  <meta property="og:title" content="Projecte Ctrl Z">
+  <meta property="og:description" content="Podcast juvenil en català. Novetats, curiositats i debats sense filtres.">
   <meta property="og:image" content="/assets/images/FotoLogo.png">
   <link rel="icon" type="image/png" href="/assets/images/FotoLogo.png">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <header class="navbar">
-    <div class="container">
-      <a href="index.html" class="logo-area">
-        <img src="/assets/images/FotoLogo.png" alt="Logo Projecte Ctrl Z" class="logo-img">
-        <span class="logo-text">Projecte Ctrl Z</span>
-      </a>
-      <nav>
-        <button class="nav-toggle" aria-label="Menú" aria-expanded="false">☰</button>
-        <ul class="nav-links">
-          <li><a href="index.html">Inici</a></li>
-          <li><a href="sobre-nosaltres.html">Sobre nosaltres</a></li>
-          <li><a href="programes.html">Programes</a></li>
-          <li><a href="en-directe.html">En directe</a></li>
-      <!--    <li><a href="contacte.html">Contacte</a></li> -->
-        <!--  <li><a href="patrocina.html">Patrocina</a></li> -->
-        </ul>
-      </nav>
-    </div>
-  </header>
+<header class="navbar">
+  <div class="container">
+    <a href="index.html" class="logo-area">
+      <img src="/assets/images/FotoLogo.png" alt="Logo Projecte Ctrl Z" class="logo-img animated-logo">
+      <span class="logo-text">Projecte Ctrl Z</span>
+    </a>
+    <nav>
+      <button class="nav-toggle" aria-label="Menú" aria-expanded="false">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Inici</a></li>
+        <li><a href="sobre-nosaltres.html">Sobre nosaltres</a></li>
+        <li><a href="programes.html">Programes</a></li>
+        <li><a href="en-directe.html">En directe</a></li>
+        <li><a href="galeria.html">Galeria Z</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
   <main>
     <section class="section" style="margin-top:2.5rem;">
       <h1 style="display:inline-flex;align-items:center;gap:0.7em;">
-    En directe
-    <span id="live-badge" class="live-badge" aria-label="En directe" style="display:none;"></span>
+        En directe
+        <span id="live-badge" class="live-badge" aria-label="En directe" style="display:none;"></span>
       </h1>
-      <p class="subtitle">En directe a la ràdio tots els diumenges de 19-20h.</p>
+      <p class="subtitle">En directe a la ràdio cada diumenge de 19-20h.</p>
       <a href="https://www.antiga.onadesants.cat/" target="_blank" style="display:inline-block;">
         <span class="radio-wave-outer">
           <img src="/assets/images/LogoRadio.png" alt="Ona de Sants Montjuïc" class="radio-wave-img">
@@ -45,8 +47,13 @@
       <div style="margin-top:0.5rem;">
         <a href="https://www.antiga.onadesants.cat/" target="_blank" style="color:#d85d2a;text-decoration:underline;font-weight:500;">Escolta'ns a Ona de Sants Montjuïc</a>
       </div>
+      <div style="background:#fef6f3;margin:2.5rem auto 0 auto;padding:2rem 1.5rem;border-radius:1.2rem;max-width:900px;text-align:center;font-family:'Open Sans',sans-serif;color:#333;font-size:1.13rem;line-height:1.7;box-shadow:0 2px 12px #d85d2a11;">
+        Ona de Sants-Montjuïc és l’emissora de ràdio comunitària del barri de Sants, a Barcelona. Porta anys sent un punt de trobada per a iniciatives culturals i juvenils, oferint espai a projectes que volen comunicar, experimentar i connectar amb el públic local.<br><br>
+        Tot i que el projecte del podcast no va néixer a la ràdio, la col·laboració amb Ona de Sants-Montjuïc ha estat clau per donar-li un salt de qualitat. Gràcies a l’acompanyament i als recursos de l’emissora, els integrants del podcast han pogut créixer i professionalitzar-se en aquest format. Cal destacar especialment el suport del Jordi Roca i la Lourdes Tasies, que amb la seva experiència i dedicació han ajudat a impulsar el projecte i a fer que l’experiència sigui molt enriquidora per a tothom.
+      </div>
     </section>
   </main>
+
   <footer class="footer">
     <div class="container footer-flex">
       <div class="footer-logo">
@@ -56,6 +63,7 @@
     </div>
     <div class="footer-copy">© 2025 Projecte Ctrl Z. Tots els drets reservats.</div>
   </footer>
+
   <script>
     // Menú hamburguesa
     const navToggle = document.querySelector('.nav-toggle');
@@ -65,15 +73,17 @@
       navToggle.setAttribute('aria-expanded', !expanded);
       navLinks.classList.toggle('open');
     });
-    // Animación de entrada para los logos y control de badge en directe
+
+    // Animació de logo (igual que a Inici)
     window.addEventListener('DOMContentLoaded', function() {
       document.querySelectorAll('.animated-logo').forEach(function(logo) {
         logo.classList.add('logo-animate-in');
       });
-      // Mostrar badge solo domingos de 19 a 20h
+
+      // Check LIVE
       function checkLive() {
         const now = new Date();
-        const day = now.getDay(); // 0=domingo
+        const day = now.getDay(); 
         const hour = now.getHours();
         const min = now.getMinutes();
         const badge = document.getElementById('live-badge');
@@ -84,10 +94,8 @@
         }
       }
       checkLive();
-      setInterval(checkLive, 30000); // actualiza cada 30s
+      setInterval(checkLive, 30000); 
     });
   </script>
 </body>
-
 </html>
-
