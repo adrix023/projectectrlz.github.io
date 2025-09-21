@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeria Z | Projecte Ctrl Z</title>
+  <meta name="description" content="Galeria de fotos del Projecte Ctrl Z.">
+  <meta property="og:title" content="Projecte Ctrl Z">
+  <meta property="og:description" content="Podcast juvenil en català. Novetats, curiositats i debats sense filtres.">
+  <meta property="og:image" content="/assets/images/FotoLogo.png">
+  <link rel="icon" type="image/png" href="/assets/images/FotoLogo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#D54D29',
+            secondary: '#F6E3C5',
+            dark: '#000',
+            light: '#fff',
+          },
+          fontFamily: {
+            poppins: ['Poppins', 'sans-serif'],
+            opensans: ['Open Sans', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-light min-h-screen flex flex-col">
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo-area">
+        <img src="/assets/images/FotoLogo.png" alt="Logo Projecte Ctrl Z" class="logo-img animated-logo">
+        <span class="logo-text">Projecte Ctrl Z</span>
+      </a>
+      <nav>
+        <button class="nav-toggle" aria-label="Menú" aria-expanded="false">☰</button>
+        <ul class="nav-links">
+          <li><a href="index.html">Inici</a></li>
+          <li><a href="sobre-nosaltres.html">Sobre nosaltres</a></li>
+          <li><a href="programes.html">Programes</a></li>
+          <li><a href="en-directe.html">En directe</a></li>
+          <li><a href="galeria.html">Galeria Z</a></li>
+          <!-- <li><a href="contacte.html">Contacte</a></li> -->
+          <!-- <li><a href="patrocina.html">Patrocina</a></li> -->
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="flex-1">
+    <div class="max-w-screen-lg mx-auto px-4 py-12">
+      <h1 class="font-poppins text-primary text-5xl font-bold text-center mb-4">Galeria Z</h1>
+      <p class="font-opensans text-dark text-lg text-center mb-12">Una mirada als millors moments del projecte</p>
+      <div class="flex justify-center items-center">
+        <div class="w-full max-w-4xl mx-auto">
+          <div class="relative w-full flex flex-col items-center">
+            <!-- Carrusel -->
+            <div class="overflow-hidden w-full rounded-2xl bg-secondary shadow-lg flex justify-center items-center" style="height:500px;">
+              <img id="carouselImg" src="/assets/images/foto1.jpg" alt="Foto galeria" class="rounded-lg shadow-lg object-cover w-full h-full transition-all duration-500" style="max-height:500px;">
+              <button id="prevBtn" aria-label="Foto anterior" class="absolute left-2 top-1/2 -translate-y-1/2 bg-primary text-white rounded-full p-3 shadow-lg hover:bg-secondary transition z-10">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+              <button id="nextBtn" aria-label="Foto següent" class="absolute right-2 top-1/2 -translate-y-1/2 bg-primary text-white rounded-full p-3 shadow-lg hover:bg-secondary transition z-10">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+            <div class="flex justify-center items-center gap-2 mt-6">
+              <span class="indicator w-3 h-3 rounded-full bg-primary opacity-60 cursor-pointer" data-index="0"></span>
+              <span class="indicator w-3 h-3 rounded-full bg-primary opacity-60 cursor-pointer" data-index="1"></span>
+              <span class="indicator w-3 h-3 rounded-full bg-primary opacity-60 cursor-pointer" data-index="2"></span>
+              <span class="indicator w-3 h-3 rounded-full bg-primary opacity-60 cursor-pointer" data-index="3"></span>
+              <span class="indicator w-3 h-3 rounded-full bg-primary opacity-60 cursor-pointer" data-index="4"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer mt-auto">
+    <div class="container footer-flex">
+      <div class="footer-logo">
+        <img src="/assets/images/FotoLogo.png" alt="Logo" class="footer-img">
+        <span>Projecte Ctrl Z</span>
+      </div>
+    </div>
+    <div class="footer-copy">© 2025 Projecte Ctrl Z. Tots els drets reservats.</div>
+  </footer>
+
+  <script>
+    // Menú hamburguesa
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    navToggle.addEventListener('click', function() {
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', !expanded);
+      navLinks.classList.toggle('open');
+    });
+
+    // Animació del logo
+    window.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('.animated-logo').forEach(function(logo) {
+        logo.classList.add('logo-animate-in');
+      });
+    });
+
+    // Carrusel
+    const images = [
+      '/assets/images/foto1.jpg',
+      '/assets/images/foto2.jpg',
+      '/assets/images/foto3.jpg',
+      '/assets/images/foto4.png',
+      '/assets/images/foto5.png'
+    ];
+    let current = 0;
+    const img = document.getElementById('carouselImg');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const indicators = document.querySelectorAll('.indicator');
+
+    function showImage(idx) {
+      img.classList.remove('opacity-100');
+      img.classList.add('opacity-0');
+      setTimeout(() => {
+        img.src = images[idx];
+        img.classList.remove('opacity-0');
+        img.classList.add('opacity-100');
+        indicators.forEach((el, i) => {
+          el.style.opacity = i === idx ? '1' : '0.6';
+          el.style.background = i === idx ? '#D54D29' : '#F6E3C5';
+        });
+      }, 200);
+      current = idx;
+    }
+
+    prevBtn.addEventListener('click', () => {
+      showImage((current - 1 + images.length) % images.length);
+    });
+    nextBtn.addEventListener('click', () => {
+      showImage((current + 1) % images.length);
+    });
+    indicators.forEach((el, i) => {
+      el.addEventListener('click', () => showImage(i));
+    });
+    showImage(0);
+  </script>
+</body>
+</html>
