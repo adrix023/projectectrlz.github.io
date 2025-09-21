@@ -4,17 +4,36 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sobre nosaltres | Projecte Ctrl Z</title>
-  <meta name="description" content="Som dos estudiants d’Educació i d’Informàtica, el Bernat i l’Adrià, i us presentem el podcast on exposem la realitat juvenil sense filtres.">
+  <meta name="description" content="Presentació d'Adrià i Bernat, equip de Projecte Ctrl Z.">
   <meta property="og:image" content="/assets/images/FotoLogo.png">
   <link rel="icon" type="image/png" href="/assets/images/FotoLogo.png">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#D54D29',
+            dark: '#333',
+            soft: '#fef6f3',
+          },
+          fontFamily: {
+            poppins: ['Poppins', 'sans-serif'],
+            opensans: ['Open Sans', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
 </head>
 <body>
+  <!-- Header amb logo, nom i menú hamburguesa igual que programes.html -->
   <header class="navbar">
     <div class="container">
       <a href="index.html" class="logo-area">
-        <img src="/assets/images/FotoLogo.png" alt="Logo Projecte Ctrl Z" class="logo-img">
+        <img src="/assets/images/FotoLogo.png" alt="Logo Projecte Ctrl Z" class="logo-img animated-logo">
         <span class="logo-text">Projecte Ctrl Z</span>
       </a>
       <nav>
@@ -24,28 +43,48 @@
           <li><a href="sobre-nosaltres.html">Sobre nosaltres</a></li>
           <li><a href="programes.html">Programes</a></li>
           <li><a href="en-directe.html">En directe</a></li>
-      <!--    <li><a href="contacte.html">Contacte</a></li> -->
-        <!--  <li><a href="patrocina.html">Patrocina</a></li> -->
+          <li><a href="galeria.html">Galeria Z</a></li>
         </ul>
       </nav>
     </div>
   </header>
+
+  <!-- Contingut principal -->
   <main>
-    <section class="section" style="margin-top:2.5rem;">
-  <h1>Sobre nosaltres</h1>
-      <p class="subtitle">Som dos estudiants d'Educació i d'Informàtica, el Bernat i l’Adrià, i us presentem el podcast on exposem la realitat juvenil sense filtres.</p>
-      <div style="display:flex;justify-content:center;gap:2.5rem;flex-wrap:wrap;max-width:700px;margin:2rem auto 0 auto;">
-        <div style="text-align:center;">
-          <img src="/assets/images/Bernat.png" alt="Bernat" style="width:180px;max-width:90vw;height:180px;object-fit:cover;border-radius:50%;box-shadow:0 2px 12px #d85d2a22;background:#fff7f2;margin-bottom:0.7rem;">
-          <div style="font-weight:600;font-size:1.1rem;">Bernat</div>
+    <div class="max-w-[1000px] mx-auto px-6 py-12">
+      <!-- Secció Adrià -->
+      <section class="mb-16 flex flex-col md:grid md:grid-cols-2 md:gap-12 items-center">
+        <div class="flex justify-center md:justify-start mb-0 md:mb-0">
+          <img src="/assets/images/Adrià.png" alt="Adrià" class="rounded-full shadow-lg w-[300px] h-[300px] object-cover border-4 border-primary">
         </div>
-        <div style="text-align:center;">
-          <img src="/assets/images/Adrià.png" alt="Adrià" style="width:180px;max-width:90vw;height:180px;object-fit:cover;border-radius:50%;box-shadow:0 2px 12px #d85d2a22;background:#fff7f2;margin-bottom:0.7rem;">
-          <div style="font-weight:600;font-size:1.1rem;">Adrià</div>
+        <div class="flex flex-col justify-center">
+          <h2 class="font-poppins text-primary text-4xl font-bold mb-4">Adrià</h2>
+          <p class="font-opensans text-dark text-xl md:text-2xl mt-2">L’Adrià és estudiant d’informàtica i el desenvolupador d’aquesta pàgina web. Ha dedicat hores a escriure codi, resoldre errors i fer que tot funcioni com cal. Tot i la seva habilitat amb els ordinadors, reconeix que no té la mateixa sort en qüestions d’amor, on els algoritmes encara no li responen tan bé com voldria.</p>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <!-- Secció Bernat -->
+      <section class="mb-16 flex flex-col md:grid md:grid-cols-2 md:gap-12 items-center">
+        <div class="flex flex-col justify-center order-2 md:order-1 md:ml-[-64px]">
+          <h2 class="font-poppins text-primary text-4xl font-bold mb-4 text-right md:text-right md:mr-[-48px]">Bernat</h2>
+          <p class="font-opensans text-dark text-xl md:text-2xl text-right md:text-right mt-2">El Bernat és estudiant d’educació i el creador del podcast que acompanya aquest projecte. Té la virtut (o el defecte) de no parar mai de donar idees a l’Adrià. Sigui de dia o de nit, sempre troba un moment per enviar un missatge amb alguna ocurrència nova. Aquesta constància fa que molts el considerin el veritable motor creatiu del projecte o simplement en “el pesat” oficial de l’equip.</p>
+        </div>
+        <div class="flex justify-center md:justify-end order-1 md:order-2 mb-6 md:mb-0">
+          <img src="/assets/images/Bernat.png" alt="Bernat" class="rounded-full shadow-lg w-[300px] h-[300px] object-cover border-4 border-primary">
+        </div>
+      </section>
+
+      <!-- Secció Junts -->
+      <section class="flex flex-col items-center">
+        <h2 class="font-poppins text-primary text-4xl md:text-5xl font-bold mb-6">Junts</h2>
+        <div class="bg-soft rounded-2xl p-8 max-w-2xl w-full text-center shadow-md">
+          <p class="font-opensans text-dark text-xl md:text-2xl">Junts, l’Adrià i el Bernat volen connectar amb els joves i qüestionar aquelles pràctiques que sovint es venen com normals però que acaben sent autodestructives: l’obsessió per la festa, l’abús de les drogues o el culte excessiu al cos són exemples d’alguns temes. El seu objectiu és obrir debat i demostrar que hi ha maneres diferents de viure i créixer sense seguir inèrcies que només porten problemes.</p>
+        </div>
+      </section>
+    </div>
   </main>
+
+  <!-- Footer original -->
   <footer class="footer">
     <div class="container footer-flex">
       <div class="footer-logo">
@@ -55,8 +94,10 @@
     </div>
     <div class="footer-copy">© 2025 Projecte Ctrl Z. Tots els drets reservats.</div>
   </footer>
+
+  <!-- Scripts -->
   <script>
-    // Menú hamburguesa
+    // Menú hamburguesa igual que programes.html
     const navToggle = document.querySelector('.nav-toggle');
     const navLinks = document.querySelector('.nav-links');
     navToggle.addEventListener('click', function() {
@@ -64,7 +105,13 @@
       navToggle.setAttribute('aria-expanded', !expanded);
       navLinks.classList.toggle('open');
     });
+
+    // Animació del logo igual que programes.html
+    window.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('.animated-logo').forEach(function(logo) {
+        logo.classList.add('logo-animate-in');
+      });
+    });
   </script>
 </body>
-
 </html>
