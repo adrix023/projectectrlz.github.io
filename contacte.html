@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacte | Projecte Ctrl Z</title>
+  <meta name="description" content="Contacta amb l'equip de Projecte Ctrl Z per suggeriments, dubtes o col·laboracions.">
+  <meta property="og:title" content="Projecte Ctrl Z">
+  <meta property="og:image" content="/assets/images/FotoLogo.png">
+  <link rel="icon" type="image/png" href="/assets/images/FotoLogo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .flag-icon { width: 24px; height: 24px; object-fit: cover; border-radius: 50%; border: 1px solid #ddd; }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#D54D29',
+            secondary: '#F6E3C5',
+            dark: '#000',
+            light: '#fff',
+          },
+          fontFamily: {
+            poppins: ['Poppins', 'sans-serif'],
+            opensans: ['Open Sans', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#f9f6f2] flex flex-col min-h-screen">
+  
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo-area">
+        <span class="logo-text" data-lang="logo_text">Projecte Ctrl Z</span>
+      </a>
+      <nav>
+        <button class="nav-toggle" aria-label="Menú" aria-expanded="false">☰</button>
+        <ul class="nav-links">
+          <li><a href="index.html" data-lang="nav_home">Inici</a></li>
+          <li><a href="sobre-nosaltres.html" data-lang="nav_about">Sobre nosaltres</a></li>
+          <li><a href="programes.html" data-lang="nav_programs">Programes</a></li>
+          <li><a href="en-directe.html" data-lang="nav_live">En directe</a></li>
+          <li><a href="galeria.html" data-lang="nav_gallery">Galeria Z</a></li>
+          <li><a href="contacte.html" data-lang="nav_contact" class="font-bold border-b-2 border-white">Contacte</a></li>
+          
+          <li class="lang-menu">
+            <button id="lang-btn" class="lang-btn" style="display:flex;align-items:center;gap:5px;background:transparent;border:1px solid #fff;padding:4px 8px;border-radius:20px;cursor:pointer;">
+              <img id="current-lang-flag" src="assets/images/flag-ca.png" alt="Català" class="flag-icon"> 
+              <span style="color:white;font-size:0.8rem;">▼</span>
+            </button>
+            <div id="lang-dropdown" class="lang-dropdown">
+              <a href="#" onclick="changeLanguage('ca'); return false;">
+                <img src="assets/images/flag-ca.png" alt="CAT" class="flag-icon"> Català
+              </a>
+              <a href="#" onclick="changeLanguage('es'); return false;">
+                <img src="assets/images/flag-es.png" alt="ES" class="flag-icon"> Castellano
+              </a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="flex-1 mt-[80px]">
+    <div class="max-w-screen-lg mx-auto px-4 py-12">
+      
+      <div class="text-center mb-12">
+        <h1 class="font-poppins text-primary text-5xl font-bold mb-4" data-lang="contact_h1">Contacta'ns</h1>
+        <p class="font-opensans text-dark text-lg" data-lang="contact_subtitle">Tens algun dubte, proposta o suggeriment? Escriu-nos!</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        
+        <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-primary">
+          <h2 class="text-2xl font-bold text-primary mb-6 font-poppins">Projecte Ctrl Z</h2>
+          <div class="mb-6">
+            <p class="text-gray-600 text-sm font-bold uppercase tracking-wider mb-1" data-lang="contact_email_label">Correu electrònic oficial:</p>
+            <a href="mailto:projectectrlzcontacte@gmail.com" class="text-xl font-medium text-dark hover:text-primary transition flex items-center gap-2 break-all">
+              <span class="text-2xl">✉️</span> projectectrlzcontacte@gmail.com
+            </a>
+          </div>
+          <div class="flex gap-4 mt-8 justify-center md:justify-start">
+            <a href="https://www.instagram.com/projectectrlz/" target="_blank" class="transform hover:scale-110 transition"><img src="assets/images/instagram.svg" alt="Instagram" class="w-8 h-8 opacity-80 hover:opacity-100"></a>
+            <a href="https://www.tiktok.com/@projectectrlz" target="_blank" class="transform hover:scale-110 transition"><img src="assets/images/tiktok.svg" alt="TikTok" class="w-8 h-8 opacity-80 hover:opacity-100"></a>
+            <a href="https://www.youtube.com/@ProjecteCtrlZ" target="_blank" class="transform hover:scale-110 transition"><img src="assets/images/youtube.svg" alt="YouTube" class="w-8 h-8 opacity-80 hover:opacity-100"></a>
+          </div>
+        </div>
+
+        <form id="contact-form" action="https://formspree.io/f/maqndkgv" method="POST" class="bg-[#fff7f2] p-8 rounded-2xl shadow-md">
+          <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2 font-poppins" for="nom" data-lang="form_name">Nom</label>
+            <input class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition" id="nom" name="name" type="text" placeholder="El teu nom" data-lang="form_name" required>
+          </div>
+          
+          <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2 font-poppins" for="email" data-lang="form_email">El teu correu</label>
+            <input class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition" id="email" name="email" type="email" placeholder="exemple@gmail.com" data-lang="form_email" required>
+          </div>
+
+          <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2 font-poppins" for="assumpte" data-lang="form_subject">Assumpte</label>
+            <input class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition" id="assumpte" name="subject" type="text" placeholder="Motiu del missatge" data-lang="form_subject" required>
+          </div>
+
+          <div class="mb-6">
+            <label class="block text-gray-700 text-sm font-bold mb-2 font-poppins" for="missatge" data-lang="form_message">Missatge</label>
+            <textarea class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition h-32 resize-none" id="missatge" name="message" placeholder="Escriu aquí el teu missatge..." data-lang="form_message" required></textarea>
+          </div>
+
+          <button type="submit" id="submit-btn" class="w-full bg-primary text-white font-bold py-3 px-4 rounded-full hover:bg-[#b13e1e] transition transform hover:-translate-y-1 shadow-md" data-lang="form_btn">
+            Enviar Missatge
+          </button>
+          <p id="form-status" class="mt-4 text-center font-bold text-green-600 hidden"></p>
+        </form>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer mt-auto">
+    <div class="container footer-flex">
+      <div class="footer-logo">
+        <span>Projecte Ctrl Z</span>
+      </div>
+    </div>
+    <div class="footer-copy" data-lang="footer_rights">© 2025 Projecte Ctrl Z. Tots els drets reservats.</div>
+  </footer>
+
+  <script>
+    // Menú
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    navToggle.addEventListener('click', function() {
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', !expanded);
+      navLinks.classList.toggle('open');
+    });
+
+    // Lògica per enviar el formulari sense recarregar (AJAX)
+    var form = document.getElementById("contact-form");
+    
+    async function handleSubmit(event) {
+      event.preventDefault();
+      var status = document.getElementById("form-status");
+      var btn = document.getElementById("submit-btn");
+      var data = new FormData(event.target);
+      
+      btn.disabled = true;
+      btn.textContent = "Enviant...";
+
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          status.innerHTML = "Gràcies! Hem rebut el teu missatge.";
+          status.classList.remove('hidden');
+          status.classList.add('text-green-600');
+          form.reset();
+        } else {
+          response.json().then(data => {
+            if (Object.hasOwn(data, 'errors')) {
+              status.innerHTML = data["errors"].map(error => error["message"]).join(", ");
+            } else {
+              status.innerHTML = "Hi ha hagut un error. Torna-ho a provar.";
+            }
+            status.classList.remove('hidden');
+            status.classList.add('text-red-600');
+          })
+        }
+        btn.disabled = false;
+        btn.textContent = "Enviar Missatge";
+      }).catch(error => {
+        status.innerHTML = "Error de connexió. Torna-ho a provar.";
+        status.classList.remove('hidden');
+        status.classList.add('text-red-600');
+        btn.disabled = false;
+        btn.textContent = "Enviar Missatge";
+      });
+    }
+    form.addEventListener("submit", handleSubmit);
+  </script>
+  
+  <script src="assets/js/lang.js"></script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre nosaltres | Projecte Ctrl Z</title>
+  <meta name="description" content="Presentació d'Adrià i Bernat, equip de Projecte Ctrl Z.">
+  <meta property="og:image" content="/assets/images/FotoLogo.png">
+  <link rel="icon" type="image/png" href="/assets/images/FotoLogo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .flag-icon { width: 24px; height: 24px; object-fit: cover; border-radius: 50%; border: 1px solid #ddd; }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#D54D29',
+            dark: '#333',
+            soft: '#fef6f3',
+          },
+          fontFamily: {
+            poppins: ['Poppins', 'sans-serif'],
+            opensans: ['Open Sans', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo-area">
+        <span class="logo-text" data-lang="logo_text">Projecte Ctrl Z</span>
+      </a>
+      <nav>
+        <button class="nav-toggle" aria-label="Menú" aria-expanded="false">☰</button>
+        <ul class="nav-links">
+          <li><a href="index.html" data-lang="nav_home">Inici</a></li>
+          <li><a href="sobre-nosaltres.html" data-lang="nav_about">Sobre nosaltres</a></li>
+          <li><a href="programes.html" data-lang="nav_programs">Programes</a></li>
+          <li><a href="en-directe.html" data-lang="nav_live">En directe</a></li>
+          <li><a href="galeria.html" data-lang="nav_gallery">Galeria Z</a></li>
+          <li><a href="contacte.html" data-lang="nav_contact">Contacte</a></li>
+          
+          <li class="lang-menu">
+            <button id="lang-btn" class="lang-btn" style="display:flex;align-items:center;gap:5px;background:transparent;border:1px solid #fff;padding:4px 8px;border-radius:20px;cursor:pointer;">
+              <img id="current-lang-flag" src="assets/images/flag-ca.png" alt="Català" class="flag-icon"> 
+              <span style="color:white;font-size:0.8rem;">▼</span>
+            </button>
+            <div id="lang-dropdown" class="lang-dropdown">
+              <a href="#" onclick="changeLanguage('ca'); return false;">
+                <img src="assets/images/flag-ca.png" alt="CAT" class="flag-icon"> Català
+              </a>
+              <a href="#" onclick="changeLanguage('es'); return false;">
+                <img src="assets/images/flag-es.png" alt="ES" class="flag-icon"> Castellano
+              </a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="max-w-[1000px] mx-auto px-6 py-12">
+      <section class="mb-16 flex flex-col md:grid md:grid-cols-2 md:gap-12 items-center">
+        <div class="flex justify-center md:justify-start mb-0 md:mb-0">
+          <div class="rounded-full p-1 bg-gradient-to-r from-primary to-orange-400">
+            <img src="/assets/images/Adrià.png" alt="Adrià" class="rounded-full w-[450px] h-[450px] object-cover bg-white">
+          </div>
+        </div>
+        <div class="flex flex-col justify-center">
+          <h2 class="font-poppins text-4xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-400 tracking-wide uppercase">
+            Adrià
+          </h2>
+          <p class="font-sans text-gray-700 text-xl md:text-2xl mt-2 leading-relaxed" data-lang="about_adria_text">
+            L’Adrià és estudiant d’informàtica i el desenvolupador d’aquesta pàgina web. Ha dedicat hores a escriure codi, resoldre errors i fer que tot funcioni com cal. Tot i que no és el més expert a l'hora de comunicar és un dels pilars fonamentals del projecte ajudant al Bernat a donar forma a les seves idees i donant-li suport en tot moment.    
+          </p>
+        </div>
+      </section>
+
+      <section class="mb-16 flex flex-col md:grid md:grid-cols-2 md:gap-12 items-center">
+        <div class="flex flex-col justify-center order-2 md:order-1 md:ml-[-64px]">
+          <h2 class="font-poppins text-4xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-400 tracking-wide uppercase text-right md:text-right md:mr-[-48px]">
+            Bernat
+          </h2>
+          <p class="font-sans text-gray-700 text-xl md:text-2xl text-right md:text-right mt-2 leading-relaxed" data-lang="about_bernat_text">
+            El Bernat és estudiant d’educació i el creador del podcast que acompanya aquest projecte. Té la virtut (o el defecte) de no parar mai de donar idees a l’Adrià. Sigui de dia o de nit, sempre troba un moment per enviar un missatge amb alguna ocurrència nova. Aquesta constància fa que molts el considerin el veritable motor creatiu del projecte o simplement en “el pesat” oficial de l’equip.
+          </p>
+        </div>
+        <div class="flex justify-center md:justify-end order-1 md:order-2 mb-6 md:mb-0">
+          <div class="rounded-full p-1 bg-gradient-to-r from-primary to-orange-400">
+            <img src="/assets/images/Bernat.png" alt="Bernat" class="rounded-full w-[450px] h-[450px] object-cover bg-white">
+          </div>
+        </div>
+      </section>
+
+      <section class="flex flex-col items-center">
+        <h2 class="font-poppins text-primary text-4xl md:text-5xl font-bold mb-6" data-lang="about_junts_title">Junts</h2>
+        <div class="bg-soft rounded-2xl p-8 max-w-2xl w-full text-center shadow-md">
+          <p class="font-opensans text-dark text-xl md:text-2xl" data-lang="about_junts_text">Junts, l’Adrià i el Bernat volen connectar amb els joves i qüestionar aquelles pràctiques que sovint es venen com normals però que acaben sent autodestructives: l’obsessió per la festa, l’abús de les drogues o el culte excessiu al cos són exemples d’alguns temes. El seu objectiu és obrir debat i demostrar que hi ha maneres diferents de viure i créixer sense seguir inèrcies que només porten problemes.</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-flex">
+      <div class="footer-logo">
+        <span>Projecte Ctrl Z</span>
+      </div>
+    </div>
+    <div class="footer-copy" data-lang="footer_rights">© 2025 Projecte Ctrl Z. Tots els drets reservats.</div>
+  </footer>
+
+  <script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    navToggle.addEventListener('click', function() {
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', !expanded);
+      navLinks.classList.toggle('open');
+    });
+    window.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('.animated-logo').forEach(function(logo) {
+        logo.classList.add('logo-animate-in');
+      });
+    });
+  </script>
+  
+  <script src="assets/js/lang.js"></script>
+</body>
+</html>

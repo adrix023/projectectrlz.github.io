@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>En directe | Projecte Ctrl Z</title>
+  <meta name="description" content="En directe a la ràdio cada diumenge de 19-20h i en altres plataformes dimecres a les 19h.">
+  <meta property="og:title" content="Projecte Ctrl Z">
+  <meta property="og:description" content="Podcast juvenil en català. Novetats, curiositats i debats sense filtres.">
+  <meta property="og:image" content="/assets/images/FotoLogo.png">
+  <link rel="icon" type="image/png" href="/assets/images/FotoLogo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .flag-icon { width: 24px; height: 24px; object-fit: cover; border-radius: 50%; border: 1px solid #ddd; }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+<header class="navbar">
+  <div class="container">
+    <a href="index.html" class="logo-area">
+      <span class="logo-text" data-lang="logo_text">Projecte Ctrl Z</span>
+    </a>
+    <nav>
+      <button class="nav-toggle" aria-label="Menú" aria-expanded="false">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html" data-lang="nav_home">Inici</a></li>
+        <li><a href="sobre-nosaltres.html" data-lang="nav_about">Sobre nosaltres</a></li>
+        <li><a href="programes.html" data-lang="nav_programs">Programes</a></li>
+        <li><a href="en-directe.html" data-lang="nav_live">En directe</a></li>
+        <li><a href="galeria.html" data-lang="nav_gallery">Galeria Z</a></li>
+        <li><a href="contacte.html" data-lang="nav_contact">Contacte</a></li>
+        
+        <li class="lang-menu">
+          <button id="lang-btn" class="lang-btn" style="display:flex;align-items:center;gap:5px;background:transparent;border:1px solid #fff;padding:4px 8px;border-radius:20px;cursor:pointer;">
+            <img id="current-lang-flag" src="assets/images/flag-ca.png" alt="Català" class="flag-icon"> 
+            <span style="color:white;font-size:0.8rem;">▼</span>
+          </button>
+          <div id="lang-dropdown" class="lang-dropdown">
+            <a href="#" onclick="changeLanguage('ca'); return false;">
+              <img src="assets/images/flag-ca.png" alt="CAT" class="flag-icon"> Català
+            </a>
+            <a href="#" onclick="changeLanguage('es'); return false;">
+              <img src="assets/images/flag-es.png" alt="ES" class="flag-icon"> Castellano
+            </a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+  <main>
+    <section class="section" style="margin-top:2.5rem;">
+      <h1 style="display:inline-flex;align-items:center;gap:0.7em;">
+        <span data-lang="live_h1">En directe</span>
+        <span id="live-badge" class="live-badge" aria-label="En directe" style="display:none;"></span>
+      </h1>
+      <p class="subtitle" data-lang="live_subtitle">En directe a la ràdio cada diumenge de 19-20h.</p>
+      <a href="https://www.antiga.onadesants.cat/" target="_blank" style="display:inline-block;">
+        <span class="radio-wave-outer">
+          <img src="/assets/images/LogoRadio.png" alt="Ona de Sants Montjuïc" class="radio-wave-img">
+        </span>
+      </a>
+      <div style="margin-top:0.5rem;">
+        <a href="https://www.antiga.onadesants.cat/" target="_blank" style="color:#d85d2a;text-decoration:underline;font-weight:500;" data-lang="live_link">Escolta'ns a Ona de Sants Montjuïc</a>
+      </div>
+      <div data-lang="live_desc" style="background:#fef6f3;margin:2.5rem auto 0 auto;padding:2rem 1.5rem;border-radius:1.2rem;max-width:900px;text-align:center;font-family:'Open Sans',sans-serif;color:#333;font-size:1.13rem;line-height:1.7;box-shadow:0 2px 12px #d85d2a11;">
+        Ona de Sants-Montjuïc és l’emissora de ràdio comunitària del barri de Sants, a Barcelona. Porta anys sent un punt de trobada per a iniciatives culturals i juvenils, oferint espai a projectes que volen comunicar, experimentar i connectar amb el públic local.<br><br>
+        Tot i que el projecte del podcast no va néixer a la ràdio, la col·laboració amb Ona de Sants-Montjuïc ha estat clau per donar-li un salt de qualitat. Gràcies a l’acompanyament i als recursos de l’emissora, els integrants del podcast han pogut créixer i professionalitzar-se en aquest format. Cal destacar especialment el suport del Jordi Roca i la Lourdes Tasies, que amb la seva experiència i dedicació han ajudat a impulsar el projecte i a fer que l’experiència sigui molt enriquidora per a tothom.
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-flex">
+      <div class="footer-logo">
+        <span>Projecte Ctrl Z</span>
+      </div>
+    </div>
+    <div class="footer-copy" data-lang="footer_rights">© 2025 Projecte Ctrl Z. Tots els drets reservats.</div>
+  </footer>
+
+  <script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    navToggle.addEventListener('click', function() {
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', !expanded);
+      navLinks.classList.toggle('open');
+    });
+
+    window.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('.animated-logo').forEach(function(logo) {
+        logo.classList.add('logo-animate-in');
+      });
+
+      function checkLive() {
+        const now = new Date();
+        const day = now.getDay(); 
+        const hour = now.getHours();
+        const min = now.getMinutes();
+        const badge = document.getElementById('live-badge');
+        if (day === 0 && (hour === 19 || (hour === 20 && min === 0))) {
+          badge.style.display = 'inline-block';
+        } else {
+          badge.style.display = 'none';
+        }
+      }
+      checkLive();
+      setInterval(checkLive, 30000); 
+    });
+  </script>
+  <script src="assets/js/lang.js"></script>
+</body>
+</html>
