@@ -96,7 +96,7 @@ const translations = {
     "nav_contact": "Contacto",
 
     // Hero i Generals
-    "hero_title": "Bienvenidos a Projecte Ctrl Z",
+    "hero_title": "Bienvenidos a Proyecto Ctrl Z",
     "hero_subtitle": "El podcast juvenil donde exponemos la realidad sin filtros. ¡Novedades, curiosidades, debates y encuestas cada semana!",
     "btn_yt": "YouTube",
     "btn_spot": "Spotify",
