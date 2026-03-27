@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de Privacitat | Projecte Ctrl Z</title>
+  <meta name="description" content="Política de privacitat i ús de dades del Projecte Ctrl Z.">
+  <link rel="icon" type="image/png" href="/assets/images/FotoLogo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .flag-icon { width: 24px; height: 24px; object-fit: cover; border-radius: 50%; border: 1px solid #ddd; }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: { colors: { primary: '#D54D29', secondary: '#F6E3C5', dark: '#000', light: '#fff' }, fontFamily: { poppins: ['Poppins', 'sans-serif'], opensans: ['Open Sans', 'sans-serif'] } } }
+    }
+  </script>
+</head>
+<body class="bg-[#f9f6f2] flex flex-col min-h-screen">
+  
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo-area">
+        <span class="logo-text" data-lang="logo_text">Projecte Ctrl Z</span>
+      </a>
+      <nav>
+        <button class="nav-toggle" aria-label="Menú" aria-expanded="false">☰</button>
+        <ul class="nav-links">
+          <li><a href="index.html" data-lang="nav_home">Inici</a></li>
+          <li><a href="sobre-nosaltres.html" data-lang="nav_about">Sobre nosaltres</a></li>
+          <li><a href="programes.html" data-lang="nav_programs">Programes</a></li>
+          <li><a href="vlogs.html" data-lang="nav_vlogs">Vlogs</a></li>
+          <li><a href="en-directe.html" data-lang="nav_live">En directe</a></li>
+          <li><a href="galeria.html" data-lang="nav_gallery">Galeria Z</a></li>
+          <li><a href="contacte.html" data-lang="nav_contact">Contacte</a></li>
+          
+          <li class="lang-menu">
+            <button id="lang-btn" class="lang-btn" style="display:flex;align-items:center;gap:5px;background:transparent;border:1px solid #fff;padding:4px 8px;border-radius:20px;cursor:pointer;">
+              <img id="current-lang-flag" src="assets/images/flag-ca.png" alt="Català" class="flag-icon"> 
+              <span style="color:white;font-size:0.8rem;">▼</span>
+            </button>
+            <div id="lang-dropdown" class="lang-dropdown">
+              <a href="#" onclick="changeLanguage('ca'); return false;">
+                <img src="assets/images/flag-ca.png" alt="CAT" class="flag-icon"> Català
+              </a>
+              <a href="#" onclick="changeLanguage('es'); return false;">
+                <img src="assets/images/flag-es.png" alt="ES" class="flag-icon"> Castellano
+              </a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="flex-1 mt-[80px]">
+    <div class="max-w-screen-md mx-auto px-6 py-12">
+      <h1 class="font-poppins text-primary text-4xl font-bold mb-6 text-center" data-lang="privacy_h1">Política de Privacitat</h1>
+      
+      <div class="bg-white p-8 rounded-2xl shadow-md text-gray-800 font-opensans leading-relaxed">
+        <p class="mb-8 text-lg" data-lang="privacy_intro"></p>
+        
+        <h2 class="text-xl font-bold text-dark mb-3 font-poppins" data-lang="privacy_sec1_title">1. Dades que recollim</h2>
+        <p class="mb-6" data-lang="privacy_sec1_text"></p>
+
+        <h2 class="text-xl font-bold text-dark mb-3 font-poppins" data-lang="privacy_sec2_title">2. Finalitat de les dades</h2>
+        <p class="mb-6" data-lang="privacy_sec2_text"></p>
+
+        <h2 class="text-xl font-bold text-dark mb-3 font-poppins" data-lang="privacy_sec3_title">3. Ús de Galetes (Cookies)</h2>
+        <p class="mb-6" data-lang="privacy_sec3_text"></p>
+
+        <h2 class="text-xl font-bold text-dark mb-3 font-poppins" data-lang="privacy_sec4_title">4. Els teus drets</h2>
+        <p class="mb-2" data-lang="privacy_sec4_text"></p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer mt-auto">
+    <div class="container footer-flex">
+      <div class="footer-logo">
+        <img src="/assets/images/FotoLogo.png" alt="Logo" class="footer-img">
+        <span>Projecte Ctrl Z</span>
+      </div>
+      <div class="text-sm mt-4 md:mt-0">
+        <a href="privacitat.html" class="underline hover:text-primary transition" data-lang="footer_privacy">Política de Privacitat</a>
+      </div>
+    </div>
+    <div class="footer-copy" data-lang="footer_rights">© 2025 Projecte Ctrl Z. Tots els drets reservats.</div>
+  </footer>
+
+  <script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    navToggle.addEventListener('click', function() {
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', !expanded);
+      navLinks.classList.toggle('open');
+    });
+  </script>
+  <script src="assets/js/lang.js"></script>
+</body>
+</html>
